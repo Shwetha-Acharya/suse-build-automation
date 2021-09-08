@@ -66,6 +66,8 @@ EXAMPLE:
 
 WORKING:
 This script can be triggered if the build is successful at OBS.
+It pushes the recent changes to upstream repo and cleans up the
+local suse repo.
 
 NOTE:
 If incase the build requires any more changes or addition of any patches to succeed, 
