@@ -62,13 +62,16 @@ USAGE:
 # bash push-changes.sh <suse flavor> <series> <version>
 
 EXAMPLE:
-# bash push-changes.sh leap15 8  8.5 
+# bash push-changes.sh leap15 8 8.5 
 
 WORKING:
 This script can be triggered if the build is successful at OBS.
 
-If the build requires any more changes or additional of patches to succeed, those changes should be added to the remote suse repo and updated at OBS. 
-Once the changes made at local suse repo are committed using: # git commit -a --amend
-push-changes.sh can be triggered.
+NOTE:
+If incase the build requires any more changes or addition of any patches to succeed, 
+add the required changes to the remote suse repo and update them at OBS.
+
+Once the build succeeds, commit the changes made at local suse repo using: # git commit -a --amend
+and trigger push-changes.sh
 
 ```
