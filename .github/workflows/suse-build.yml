@@ -23,4 +23,3 @@ jobs:
             cat ~/.config/osc/oscrc
      - name: clone-gluster-suse
        run:  clone-gluster-suse.sh tumbleweed 7 7.3
-     
