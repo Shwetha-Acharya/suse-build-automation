@@ -9,8 +9,8 @@ fi
 flavor=$1
 version=$2
 
-#Example: osc co home:glusterfs:SLES15SP1-5/GlusterFS-5.7
-osc co home:glusterfs:${flavor}/GlusterFS-${version}
+#Example: osc co home:glusterfs:SLES15SP1-5/
+osc co home:glusterfs:${flavor}
 
 mkdir GlusterFS-${version}
 cd GlusterFS-${version}
