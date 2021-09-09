@@ -25,8 +25,8 @@ jobs:
             echo "apiurl = https://api.opensuse.org">>~/.config/osc/oscrc
             echo "[https://api.opensuse.org]">>~/.config/osc/oscrc
             echo "keyring=1">>~/.config/osc/oscrc
-            echo "user=$env.USER">>~/.config/osc/oscrc
-            echo "pass=$env.PASSWORD">>~/.config/osc/oscrc
+            echo "user="$env.USER"">>~/.config/osc/oscrc
+            echo "pass="$env.PASSWORD"">>~/.config/osc/oscrc
             echo "credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager">>~/.config/osc/oscrc
             cat ~/.config/osc/oscrc
      - name: clone-gluster-suse
