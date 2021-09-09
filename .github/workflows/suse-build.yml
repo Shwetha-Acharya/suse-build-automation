@@ -9,7 +9,7 @@ jobs:
 
     steps:
      - shell: bash
-       env: |
+       env:
           USER: ${{ secrets.SUSE_USER }}
           PASSWORD: ${{ secrets.SUSE_PASSWORD }}
        run: |
