@@ -18,6 +18,8 @@ jobs:
      - name: Install Dependencies
        run: |
             sudo apt-get -y install osc
+            sudo apt-get install python-dev
+            sudo apt-get install m2crypto
             mkdir -p ~/.config/osc/
             echo "[general]">>~/.config/osc/oscrc
             echo "apiurl = https://api.opensuse.org">>~/.config/osc/oscrc
