@@ -1,4 +1,3 @@
-
 name: OpenSuse Build 
 
 on: [workflow_dispatch]
@@ -11,8 +10,8 @@ jobs:
     steps:
      - shell: bash
        env:
-        USER: ${{ secrets.SUSE_USER }}
-        PASSWORD: ${{ secrets.SUSE_PASSWORD }}
+          USER: ${{ secrets.SUSE_USER }}
+          PASSWORD: ${{ secrets.SUSE_PASSWORD }}
      - uses: actions/checkout@v2
      - name: Install Dependencies
        run: |
