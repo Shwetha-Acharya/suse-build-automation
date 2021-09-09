@@ -18,9 +18,10 @@ jobs:
      - name: Install Dependencies
        run: |
             sudo apt-get -y install osc
-            sudo echo "user=env.USER">>/root/.config/osc/oscrc
-            sudo echo "credentials_mgr_class=osc.credentials.TransientCredentialsManager">>/root/.config/osc/oscrc
-            sudo echo "pass=env.PASSWORD">>/root/.config/osc/oscrc
-            sudo cat /root/.config/osc/oscrc
+            mkdir -p ~/.config/osc/
+            echo "user=env.USER">>~/.config/osc/oscrc
+            echo "credentials_mgr_class=osc.credentials.TransientCredentialsManager">>~/.config/osc/oscrc
+            echo "pass=env.PASSWORD">>~/.config/osc/oscrc
+            cat ~/.config/osc/oscrc
      - name: clone-gluster-suse
        run:  clone-gluster-suse.sh tumbleweed 7 7.3
