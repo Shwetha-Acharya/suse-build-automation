@@ -17,7 +17,7 @@ jobs:
      - uses: actions/checkout@v2
      - name: Install Dependencies
        run: |
-            dnf -y install zypper
+            sudo apt-get -y install zypper
             sudo zypper in osc
             echo "user=env.USER">>~/.config/osc/oscrc
             echo "credentials_mgr_class=osc.credentials.TransientCredentialsManager">>~/.config/osc/oscrc
