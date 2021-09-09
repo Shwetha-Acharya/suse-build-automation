@@ -17,6 +17,7 @@ jobs:
      - uses: actions/checkout@v2
      - name: Install Dependencies
        run: |
+            sudo apt-get update && apt-get install -y
             sudo apt-get -y install zypper
             sudo apt-get -y install osc
             echo "user=env.USER">>~/.config/osc/oscrc
