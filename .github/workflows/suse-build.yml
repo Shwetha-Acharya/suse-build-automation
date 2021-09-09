@@ -16,7 +16,7 @@ jobs:
           echo "$USER"
      - uses: actions/checkout@v2
      - name: Install Dependencies
-     - run: |
+       run: |
             dnf -y install zypper
             sudo zypper in osc
             echo "user=env.USER">>~/.config/osc/oscrc
@@ -24,4 +24,4 @@ jobs:
             echo "pass=env.PASSWORD">>~/.config/osc/oscrc
             cat ~/.config/osc/oscrc
      - name: clone-gluster-suse
-     - run:  clone-gluster-suse.sh tumbleweed 7 7.3
+       run:  clone-gluster-suse.sh tumbleweed 7 7.3
