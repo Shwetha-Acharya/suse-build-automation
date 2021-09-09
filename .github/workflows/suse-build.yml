@@ -29,3 +29,9 @@ jobs:
           git config --global user.name "Gluster"
           chmod +x clone-gluster-suse.sh
           ./clone-gluster-suse.sh tumbleweed 7 7.3
+     - name: clone-gluster-suse
+       run: |
+          chmod +x trigger-build.sh
+          ./trigger-build.sh tumbleweed 7.3
+    
+
