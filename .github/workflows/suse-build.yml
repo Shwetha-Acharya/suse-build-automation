@@ -38,6 +38,6 @@ jobs:
      - name: trigger-build
        run: |
           chmod +x trigger-build.sh
-          ./trigger-build.sh tumbleweed 7.3
+          ./trigger-build.sh tumbleweed-7 7.3
     
 
