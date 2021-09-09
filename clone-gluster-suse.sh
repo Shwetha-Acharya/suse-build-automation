@@ -11,7 +11,7 @@ series=$2
 version=$3
 
 echo "Cloning the glusterfs-suse repo"
-git clone git@github.com:gluster/glusterfs-suse.git
+git clone https://github.com/gluster/glusterfs-suse.git
 
 cd glusterfs-suse
 
