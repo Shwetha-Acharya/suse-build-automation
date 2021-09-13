@@ -8,12 +8,24 @@ Automate build triggers at https://build.opensuse.org/repositories/home:glusterf
   ```# dnf -y install zypper```
   ```# sudo zypper in osc```
 
-2. add your user and password details at end of ~/.config/osc/oscrc
+2. add your user and password details at end of ~/.config/osc/oscrc if oscrc file already exists
   ```# vim ~/.config/osc/oscrc
 
     user=<YOUR USER NAME in OBS>
+    keyring=1
     credentials_mgr_class=osc.credentials.TransientCredentialsManager
     pass=<YOUR PASSWORD for OBS>
+  ```
+  
+  if oscrc file does not exist, then create ~/.config/osc/oscrc and following lines to it
+  ```
+    [general]
+    apiurl = https://api.opensuse.org
+    [https://api.opensuse.org]
+    keyring=1
+    user=<YOUR USER NAME in OBS>
+    pass=<YOUR PASSWORD for OBS>
+    credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager
   ```
 
 
