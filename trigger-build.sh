@@ -23,7 +23,7 @@ osc addremove
 
 echo "commit changes to OBS"
 osc ci * -m "update ${flavor}-GlusterFS:${version}
-cd
+
 #trigger build
 echo "Build will be automatically triggered"
 echo "Incase you want to retrigger the build, use #osc rebuildpac <project> <package> [<repo> [<arch>]] or simply use User Interface at OBS
