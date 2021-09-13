@@ -31,6 +31,7 @@ jobs:
             cat ~/.config/osc/oscrc
      - name: clone-gluster-suse
        run: |
+          find / -name glusterfs-suse
           git config --global user.email "gluster-devel@gluster.org"
           git config --global user.name "Gluster"
           chmod +x clone-gluster-suse.sh
