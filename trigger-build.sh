@@ -13,9 +13,9 @@ version=$2
 osc co home:glusterfs:${flavor}
 
 mkdir GlusterFS-${version}
-cd GlusterFS-${version}
+cd glusterfs-${version}
 
-cp glusterfs-suse/glusterfs.spec/* .
+cp ../glusterfs-suse/glusterfs.spec/* .
 
 osc addremove
 
