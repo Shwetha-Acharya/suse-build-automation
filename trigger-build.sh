@@ -21,9 +21,10 @@ cp ../../glusterfs-suse/* .
 osc addremove
 
 #push the files to OBS
-osc ci home:glusterfs:${flavor}/GlusterFS-${version} 
+osc ci GlusterFS-${version} 
 
 #trigger build
 echo "Build will be automatically triggered"
 echo "Incase you want to retrigger the build, use #osc rebuildpac <project> <package> [<repo> [<arch>]] or simply use User Interface at OBS"
+cd
 
