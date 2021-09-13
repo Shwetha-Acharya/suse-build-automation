@@ -16,13 +16,13 @@ cd home:glusterfs:${flavor}
 mkdir GlusterFS-${version}
 cd GlusterFS-${version}
 
-cp ../../glusterfs-suse/ .
+cp -r ../../glusterfs-suse/ .
 rm -rf README.md
 
 osc addremove
 
 #push the files to OBS
-osc ci * -m "update ${flavour}-GlusterFS:${}
+osc ci * -m "update ${flavor}-GlusterFS:${version}
 
 #trigger build
 echo "Build will be automatically triggered"
