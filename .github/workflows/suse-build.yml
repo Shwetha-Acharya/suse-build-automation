@@ -31,10 +31,10 @@ jobs:
             cat ~/.config/osc/oscrc
      - name: clone-gluster-suse
        run: |
-          chmod +x clone-gluster-suse.sh
-          ./clone-gluster-suse.sh tumbleweed 7 7.3
           git config --global user.email "gluster-devel@gluster.org"
           git config --global user.name "Gluster"
+          chmod +x clone-gluster-suse.sh
+          ./clone-gluster-suse.sh tumbleweed 7 7.3 
      - name: trigger-build
        run: |
           chmod +x trigger-build.sh
