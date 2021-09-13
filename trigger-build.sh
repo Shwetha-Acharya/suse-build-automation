@@ -21,7 +21,7 @@ cp ../../glusterfs-suse/* .
 osc addremove
 
 #push the files to OBS
-osc ci GlusterFS-${version} 
+osc ci *
 
 #trigger build
 echo "Build will be automatically triggered"
