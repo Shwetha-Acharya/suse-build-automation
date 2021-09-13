@@ -14,7 +14,7 @@ osc co home:glusterfs:${flavor}
 
 mkdir home:glusterfs:${flavor}/GlusterFS-${version}
 
-cp -r ../../glusterfs-suse/ home:glusterfs:${flavor}/GlusterFS-${version}/
+cp -r glusterfs-suse/ home:glusterfs:${flavor}/GlusterFS-${version}/
 rm -rf README.md
 
 osc addremove
@@ -24,6 +24,5 @@ osc ci * -m "update ${flavor}-GlusterFS:${version}
 
 #trigger build
 echo "Build will be automatically triggered"
-echo "Incase you want to retrigger the build, use #osc rebuildpac <project> <package> [<repo> [<arch>]] or simply use User Interface at OBS"
-cd
+echo "Incase you want to retrigger the build, use #osc rebuildpac <project> <package> [<repo> [<arch>]] or simply use User Interface at OBS
 
