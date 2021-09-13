@@ -12,10 +12,11 @@ version=$2
 #Example: osc co home:glusterfs:SLES15SP1-5/
 osc co home:glusterfs:${flavor}
 
+cd home:glusterfs:${flavor} 
 mkdir GlusterFS-${version}
 cd glusterfs-${version}
 
-cp ../glusterfs-suse/glusterfs.spec/* .
+cp ../../glusterfs-suse/glusterfs.spec/* .
 
 osc addremove
 
