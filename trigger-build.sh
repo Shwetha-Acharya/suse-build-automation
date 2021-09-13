@@ -17,9 +17,11 @@ mkdir home:glusterfs:${flavor}/GlusterFS-${version}
 cp -r glusterfs-suse/ home:glusterfs:${flavor}/GlusterFS-${version}
 rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/.git
 cd home:glusterfs:${flavor}/
+
+echo "adding or removing changed files" 
 osc addremove
 
-#push the files to OBS
+echo "commit changes to OBS"
 osc ci * -m "update ${flavor}-GlusterFS:${version}
 cd
 #trigger build
