@@ -6,12 +6,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env: 
+        USER: ${{ secrets.SUSE_USER }}
+        PASSWORD: ${{ secrets.SUSE_PASSWORD }}
+        
     steps:
      - shell: bash
-       env:
-          USER: ${{ secrets.SUSE_USER }}
-          PASSWORD: ${{ secrets.SUSE_PASSWORD }}
        run: |
           echo "$USER"
      - uses: actions/checkout@v2
