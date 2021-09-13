@@ -12,11 +12,9 @@ version=$2
 #Example: osc co home:glusterfs:SLES15SP1-5/
 osc co home:glusterfs:${flavor}
 
-cd home:glusterfs:${flavor} 
-mkdir GlusterFS-${version}
-cd GlusterFS-${version}
+mkdir home:glusterfs:${flavor}/GlusterFS-${version}
 
-cp -r ../../glusterfs-suse/ .
+cp -r ../../glusterfs-suse/ home:glusterfs:${flavor}/GlusterFS-${version}/
 rm -rf README.md
 
 osc addremove
