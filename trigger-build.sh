@@ -14,7 +14,7 @@ osc co home:glusterfs:${flavor}
 
 cd home:glusterfs:${flavor} 
 mkdir GlusterFS-${version}
-cd glusterfs-${version}
+cd GlusterFS-${version}
 
 cp ../../glusterfs-suse/glusterfs.spec/* .
 
