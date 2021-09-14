@@ -1,14 +1,15 @@
 
 #!/bin/bash
 
-if [[ $# -lt 2 ]] ; then
-    echo 'please add flavor of suse followed by version of glusterfs as arguments. Example: #bash trigger-build.sh leap15 8.5'
+if [[ $# -lt 3 ]] ; then
+    echo 'please add flavor of suse followed by series and version of glusterfs as arguments. Example: #bash trigger-build.sh leap15 8.5'
 
     exit 0
 fi
 
 flavor=$1
-version=$2
+series=$2
+version=$3
 
 #Example: osc co home:glusterfs:SLES15SP1-5/
 osc -v co home:glusterfs:${flavor}
