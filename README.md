@@ -59,10 +59,10 @@ clones the recent glusterfs suse repo and makes the necessary changes at specfil
 # b. trigger-build.sh
 ```
 USAGE:
-# bash trigger-build.sh <suse flavor> <glusterfs version>
+# bash trigger-build.sh <suse branchname from https://build.opensuse.org/project/subprojects/home:glusterfs > <glustefs-series> <glusterfs version>
 
 EXAMPLE:
-# bash trigger-build.sh leap15 8.5
+# bash trigger-build.sh  Leap_15.1 8 8.5
 
 WORKING:
 using a tool names osc, takes care of triggering the build at  
