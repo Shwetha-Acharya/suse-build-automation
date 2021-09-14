@@ -17,6 +17,8 @@ cd glusterfs-suse
 
 git checkout -b ${flavor}-${version} origin/${flavor}-glusterfs-${series}
 
+sed -i '/Version:/c\Version:        '$version'%{?prereltag}' glusterfs.spec
+
 sed '/^\%changelog/r'<(
     echo "* `date +"%a %b %d %Y"` glusterpackager at redhat.com"
     echo "- GlusterFS ${version} GA"
