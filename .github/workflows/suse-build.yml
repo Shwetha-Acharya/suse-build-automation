@@ -24,7 +24,7 @@ jobs:
         INPUT_FLAVOR: ${{ github.event.inputs.flavor}}
         INPUT_SERIES: ${{ github.event.inputs.series}}
         INPUT_VERSION:  ${{ github.event.inputs.version}}
-        $INPUT_SUSEBRANCH:  ${{ github.event.inputs.susebranch}}
+        INPUT_SUSEBRANCH:  ${{ github.event.inputs.susebranch}}
         
     steps:
      - shell: bash
