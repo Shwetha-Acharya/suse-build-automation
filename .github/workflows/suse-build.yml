@@ -1,7 +1,20 @@
 name: OpenSuse Build 
 
-on: [workflow_dispatch]
-
+on:
+    workflow_dispatch:
+        inputs:
+            series:
+                description: Series of glusterfs that is to built and packaged
+                required: true
+            version:
+                description: Version of glusterfs that is to built and packaged
+                required: true
+            flavor:
+                description: Flavor of SUSE you want to build against. Ex. tumbleweed
+                required: true
+            susebranch:
+                description: Add appropiate branch name from https://build.opensuse.org/project/subprojects/home:glusterfs. Ex. Tumbleweed-7
+                required: true
 jobs:
   build:
 
@@ -34,10 +47,10 @@ jobs:
           git config --global user.email "gluster-devel@gluster.org"
           git config --global user.name "Gluster"
           chmod +x clone-gluster-suse.sh
-          ./clone-gluster-suse.sh tumbleweed 7 7.3 
+          ./clone-gluster-suse.sh tumbleweed $INPUT_FLAVOR $INPUT_SERIES $INPUT_VERSION
      - name: trigger-build
        run: |
           chmod +x trigger-build.sh
-          ./trigger-build.sh Tumbleweed-7 7.3
+          ./trigger-build.sh $INPUT_SUSEBRANCH $INPUT_VERSION
     
 
