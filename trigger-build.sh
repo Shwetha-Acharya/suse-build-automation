@@ -21,12 +21,12 @@ osc mkpac home:glusterfs:${flavor}/GlusterFS-${version}
 cd home:glusterfs:${flavor}/GlusterFS-${version}
 osc up
 
-cp -r ../glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
+cp -r ../glusterfs-suse/* .
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
 ls -la 
 
 echo "adding or removing changed files" 
-osc -v *
+osc -v addremove
 
 echo "commit changes to OBS"
 osc -v ci -m "update ${flavor}-GlusterFS:${version}"
