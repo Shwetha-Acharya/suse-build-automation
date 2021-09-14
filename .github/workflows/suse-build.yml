@@ -1,9 +1,9 @@
 name: OpenSuse Build 
 on:
     workflow_dispatch:
-        inputs:
-            series:
-                description: Series of glusterfs that is to built and packaged
+      inputs:
+        series:
+            description: Series of glusterfs that is to built and packaged
                 required: true
             version:
                 description: Version of glusterfs that is to built and packaged
@@ -37,14 +37,18 @@ jobs:
             sudo apt-get install python-dev
             sudo apt-get install m2crypto
             mkdir -p ~/.config/osc/
-            echo "[general]">>~/.config/osc/oscrc
-            echo "apiurl = https://api.opensuse.org">>~/.config/osc/oscrc
-            echo "[https://api.opensuse.org]">>~/.config/osc/oscrc
-            echo "keyring=1">>~/.config/osc/oscrc
-            echo "user=$USER">>~/.config/osc/oscrc
-            echo "pass=$PASSWORD">>~/.config/osc/oscrc
-            echo "credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager">>~/.config/osc/oscrc
+            
+            cat <<EOT >> ~/.config/osc/oscrc
+            [general]
+            apiurl = https://api.opensuse.org
+            [https://api.opensuse.org]
+            keyring=1
+            user=$USER
+            pass=$PASSWORD
+            credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager
+            EOT
             cat ~/.config/osc/oscrc
+            
      - name: clone-gluster-suse
        run: |
           git config --global user.email "gluster-devel@gluster.org"
