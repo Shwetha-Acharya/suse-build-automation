@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 if [[ $# -lt 2 ]] ; then
@@ -14,7 +15,11 @@ osc -v co home:glusterfs:${flavor}
 
 mkdir home:glusterfs:${flavor}/GlusterFS-${version}
 
-cp -r glusterfs-suse/ home:glusterfs:${flavor}/GlusterFS-${version}
+cd glusterfs-suse/
+git checkout ${flavor}-${version}
+
+cd ..
+cp -r glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
 rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/.git
 rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/README.md
 cd home:glusterfs:${flavor}/
