@@ -22,6 +22,10 @@ cd home:glusterfs:${flavor}/GlusterFS-${version}
 osc up
 
 cp -r ../../glusterfs-suse/* .
+
+echo "wget https://download.gluster.org/pub/gluster/glusterfs/${series}/${version}/glusterfs-${version}.tar.gz"
+wget https://download.gluster.org/pub/gluster/glusterfs/${series}/${version}/glusterfs-${version}.tar.gz
+
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
 ls -la 
 
