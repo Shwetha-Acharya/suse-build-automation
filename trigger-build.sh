@@ -15,7 +15,7 @@ osc -v co home:glusterfs:${flavor}
 
 cd glusterfs-suse
 git checkout ${flavor}-${version}
-cd
+cd ..
 
 osc mkpac home:glusterfs:${flavor}/GlusterFS-${version}
 cd home:glusterfs:${flavor}/GlusterFS-${version}
