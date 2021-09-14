@@ -13,12 +13,8 @@ version=$2
 #Example: osc co home:glusterfs:SLES15SP1-5/
 osc -v co home:glusterfs:${flavor}
 
-mkdir home:glusterfs:${flavor}/GlusterFS-${version}
+osc mkpac home:glusterfs:${flavor}/GlusterFS-${version}
 
-cd glusterfs-suse/
-git checkout ${flavor}-${version}
-
-cd ..
 cp -r glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
 ls -l  home:glusterfs:${flavor}/GlusterFS-${version}
