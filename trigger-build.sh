@@ -13,6 +13,10 @@ version=$2
 #Example: osc co home:glusterfs:SLES15SP1-5/
 osc -v co home:glusterfs:${flavor}
 
+cd glusterfs-suse
+git checkout ${flavor}-${version}
+cd
+
 osc mkpac home:glusterfs:${flavor}/GlusterFS-${version}
 cd home:glusterfs:${flavor}/GlusterFS-${version}
 osc up
