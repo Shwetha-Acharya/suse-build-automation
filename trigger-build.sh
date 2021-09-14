@@ -16,6 +16,7 @@ mkdir home:glusterfs:${flavor}/GlusterFS-${version}
 
 cp -r glusterfs-suse/ home:glusterfs:${flavor}/GlusterFS-${version}
 rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/.git
+rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/README.md
 cd home:glusterfs:${flavor}/
 
 echo "adding or removing changed files" 
