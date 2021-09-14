@@ -21,7 +21,7 @@ osc mkpac home:glusterfs:${flavor}/GlusterFS-${version}
 cd home:glusterfs:${flavor}/GlusterFS-${version}
 osc up
 
-cp -r ../glusterfs-suse/* .
+cp -r ../../glusterfs-suse/* .
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
 ls -la 
 
