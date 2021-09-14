@@ -20,6 +20,8 @@ git checkout ${flavor}-${version}
 
 cd ..
 cp -r glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
+echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}"
+ls -l
 rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/.git
 rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/README.md
 cd home:glusterfs:${flavor}/
