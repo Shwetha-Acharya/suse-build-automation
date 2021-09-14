@@ -28,7 +28,9 @@ Automate build triggers at https://build.opensuse.org/repositories/home:glusterf
     credentials_mgr_class=osc.credentials.PlaintextConfigFileCredentialsManager
   ```
 
+Or 
 
+*you can simply use github actions in this project. Github actions will take care of all the pre-requisites and triggering of below mentioned scripts.*
 
 # 2. CONTENTS
 # 
