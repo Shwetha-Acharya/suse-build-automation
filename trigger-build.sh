@@ -19,8 +19,7 @@ osc up
 
 cp -r ../../glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
-ls -la  home:glusterfs:${flavor}/GlusterFS-${version}
-
+ls -la 
 
 echo "adding or removing changed files" 
 osc -v *
