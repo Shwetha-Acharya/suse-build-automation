@@ -23,6 +23,8 @@ sed '/^\%changelog/r'<(
 ) -i -- glusterfs.spec
 
 git add glusterfs.spec
+echo "contents of glusterfs-suse:"
+ls -l
 git commit  -m "GlusterFS ${version} GA (${flavor})"
 cd ..
 
