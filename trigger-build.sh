@@ -17,7 +17,7 @@ osc mkpac home:glusterfs:${flavor}/GlusterFS-${version}
 
 cp -r glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
-ls -l  home:glusterfs:${flavor}/GlusterFS-${version}
+ls -la  home:glusterfs:${flavor}/GlusterFS-${version}
 
 cd home:glusterfs:${flavor}/
 
