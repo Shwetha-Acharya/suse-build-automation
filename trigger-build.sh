@@ -10,7 +10,7 @@ flavor=$1
 version=$2
 
 #Example: osc co home:glusterfs:SLES15SP1-5/
-osc co home:glusterfs:${flavor}
+osc -v co home:glusterfs:${flavor}
 
 mkdir home:glusterfs:${flavor}/GlusterFS-${version}
 
@@ -19,10 +19,10 @@ rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/.git
 cd home:glusterfs:${flavor}/
 
 echo "adding or removing changed files" 
-osc addremove
+osc -v addremove
 
 echo "commit changes to OBS"
-osc ci * -m "update ${flavor}-GlusterFS:${version}
+osc -v ci * -m "update ${flavor}-GlusterFS:${version}
 
 #trigger build
 echo "Build will be automatically triggered"
