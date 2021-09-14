@@ -1,5 +1,4 @@
 name: OpenSuse Build 
-
 on:
     workflow_dispatch:
         inputs:
@@ -22,6 +21,10 @@ jobs:
     env: 
         USER: ${{ secrets.SUSE_USER }}
         PASSWORD: ${{ secrets.SUSE_PASSWORD }}
+        INPUT_FLAVOR: ${{ github.event.inputs.flavor}}
+        INPUT_SERIES: ${{ github.event.inputs.series}}
+        INPUT_VERSION:  ${{ github.event.inputs.version}}
+        $INPUT_SUSEBRANCH:  ${{ github.event.inputs.susebranch}}
         
     steps:
      - shell: bash
