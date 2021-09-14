@@ -3,20 +3,19 @@ on:
     workflow_dispatch:
       inputs:
         series:
-            description: Series of glusterfs that is to built and packaged
-                required: true
-            version:
-                description: Version of glusterfs that is to built and packaged
-                required: true
-            flavor:
-                description: Flavor of SUSE you want to build against. Ex. tumbleweed
-                required: true
-            susebranch:
-                description: Add appropiate branch name from https://build.opensuse.org/project/subprojects/home:glusterfs. Ex. Tumbleweed-7
-                required: true
+          description: Series of glusterfs that is to built and packaged
+          required: true
+        version:
+          description: Version of glusterfs that is to built and packaged
+          required: true
+        flavor:
+          description: Flavor of SUSE you want to build against. Ex. tumbleweed
+          required: true
+        susebranch:
+          description: Add appropiate branch name from https://build.opensuse.org/project/subprojects/home:glusterfs. Ex. Tumbleweed-7
+          required: true
 jobs:
   build:
-
     runs-on: ubuntu-latest
     env: 
         USER: ${{ secrets.SUSE_USER }}
@@ -24,13 +23,13 @@ jobs:
         INPUT_FLAVOR: ${{ github.event.inputs.flavor}}
         INPUT_SERIES: ${{ github.event.inputs.series}}
         INPUT_VERSION:  ${{ github.event.inputs.version}}
-        INPUT_SUSEBRANCH:  ${{ github.event.inputs.susebranch}}
-        
+        INPUT_SUSEBRANCH:  ${{ github.event.inputs.susebranch}}      
     steps:
      - shell: bash
        run: |
           echo "$USER"
      - uses: actions/checkout@v2
+     
      - name: Install Dependencies
        run: |
             sudo apt-get -y install osc
