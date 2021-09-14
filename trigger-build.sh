@@ -22,12 +22,11 @@ cd ..
 cp -r glusterfs-suse/* home:glusterfs:${flavor}/GlusterFS-${version}
 echo "contents of home:glusterfs:${flavor}/GlusterFS-${version}:"
 ls -l  home:glusterfs:${flavor}/GlusterFS-${version}
-rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/.git
-rm -rf /home:glusterfs:${flavor}/GlusterFS-${version}/README.md
+
 cd home:glusterfs:${flavor}/
 
 echo "adding or removing changed files" 
-osc -v addremove
+osc -v addremove home:glusterfs:${flavor}/GlusterFS-${version}/*
 
 echo "commit changes to OBS"
 osc -v ci -m "update ${flavor}-GlusterFS:${version}"
