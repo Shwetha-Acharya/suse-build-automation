@@ -54,6 +54,6 @@ jobs:
      - name: trigger-build
        run: |
           chmod +x trigger-build.sh
-          ./trigger-build.sh $INPUT_SUSEBRANCH $INPUT_VERSION
+          ./trigger-build.sh $INPUT_SUSEBRANCH $INPUT_SERIES $INPUT_VERSION
     
 
