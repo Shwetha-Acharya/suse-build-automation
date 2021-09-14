@@ -50,7 +50,7 @@ jobs:
           git config --global user.email "gluster-devel@gluster.org"
           git config --global user.name "Gluster"
           chmod +x clone-gluster-suse.sh
-          ./clone-gluster-suse.sh tumbleweed $INPUT_FLAVOR $INPUT_SERIES $INPUT_VERSION
+          ./clone-gluster-suse.sh $INPUT_FLAVOR $INPUT_SERIES $INPUT_VERSION
      - name: trigger-build
        run: |
           chmod +x trigger-build.sh
