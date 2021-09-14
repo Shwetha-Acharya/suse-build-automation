@@ -17,7 +17,7 @@ Automate build triggers at https://build.opensuse.org/repositories/home:glusterf
     pass=<YOUR PASSWORD for OBS>
   ```
   
-  if oscrc file does not exist, then create ~/.config/osc/oscrc and following lines to it
+  if oscrc file does not exist, then create ~/.config/osc/oscrc and add following lines to it
   ```
     [general]
     apiurl = https://api.opensuse.org
