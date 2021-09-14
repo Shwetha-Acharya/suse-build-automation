@@ -22,7 +22,7 @@ echo "adding or removing changed files"
 osc -v addremove
 
 echo "commit changes to OBS"
-osc -v ci * -m "update ${flavor}-GlusterFS:${version}
+osc -v ci * -m "update ${flavor}-GlusterFS:${version}"
 
 #trigger build
 echo "Build will be automatically triggered"
