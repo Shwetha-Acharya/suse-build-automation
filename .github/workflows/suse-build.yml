@@ -9,7 +9,7 @@ on:
           description: Version of glusterfs that is to built and packaged
           required: true
         flavor:
-          description: Flavor of SUSE you want to build against. Ex. tumbleweed
+          description: Flavor of SUSE you want to build against. Ex. tumbleweed / sles15 / sles12 / leap15
           required: true
         susebranch:
           description: Add appropiate branch name from https://build.opensuse.org/project/subprojects/home:glusterfs. Ex. Tumbleweed-7
