@@ -2,7 +2,7 @@
 Automate build triggers at https://build.opensuse.org/repositories/home:glusterfs
 
 
-# 1. PRE REQUISITES:
+# PRE REQUISITES:
 
 1. Install zypper and osc
   ```# dnf -y install zypper```
@@ -32,7 +32,7 @@ Or
 
 *you can simply use github actions in this project. Github actions will take care of all the pre-requisites and triggering of below mentioned scripts.*
 
-# 2. CONTENTS
+# CONTENTS
 # 
 There are three scripts in this repo:
 
@@ -42,7 +42,7 @@ There are three scripts in this repo:
 
 
 
-# a. clone-gluster-suse.sh
+# clone-gluster-suse.sh
 ```
 USAGE:
 # bash clone-gluster-suse.sh <suse falvor> <glusterfs series> <glusterfs version>
@@ -56,7 +56,7 @@ clones the recent glusterfs suse repo and makes the necessary changes at specfil
 
 
 
-# b. trigger-build.sh
+# trigger-build.sh
 ```
 USAGE:
 # bash trigger-build.sh <suse branchname from https://build.opensuse.org/project/subprojects/home:glusterfs > <glustefs-series> <glusterfs version>
@@ -65,12 +65,12 @@ EXAMPLE:
 # bash trigger-build.sh  Leap_15.1 8 8.5
 
 WORKING:
-using a tool names osc, takes care of triggering the build at  
+using a tool named osc, this script takes care of triggering the build at  
 https://build.opensuse.org/project/subprojects/home:glusterfs
 ```
 
 
-# c. push-changes.sh
+# push-changes.sh
 ```
 USAGE:
 # bash push-changes.sh <suse flavor> <series> <version>
